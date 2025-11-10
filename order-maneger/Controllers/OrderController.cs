@@ -7,12 +7,12 @@ using Microsoft.EntityFrameworkCore;
 
 [ApiController]
 [Route("api/[controller]")]
-public class PedidosController : ControllerBase
+public class OrderController : ControllerBase
 {
     private readonly IOrderRepository _repository;
 
     private readonly IOrderService _orderService;
-    public PedidosController(IOrderRepository repository, IOrderService orderService)
+    public OrderController(IOrderRepository repository, IOrderService orderService)
     {
         _repository = repository;
         _orderService = orderService ?? throw new ArgumentNullException(nameof(orderService));
